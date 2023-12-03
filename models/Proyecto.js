@@ -22,6 +22,7 @@ const proyectosSchema = mongoose.Schema(
       trim: true,
       required: true,
     },
+    tareas: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tarea" }],
     creador: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Usuario",
